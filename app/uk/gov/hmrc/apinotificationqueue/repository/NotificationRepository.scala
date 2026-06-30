@@ -262,7 +262,7 @@ class NotificationMongoRepository @Inject()(mongo: MongoComponent,
 
     collection.aggregate[NotificationWithIdOnly](
       pipeline = Seq(filter, projection)
-    ).toFuture().map(_.toList)
+    ).hintString("clientId-Index").toFuture().map(_.toList)
   }
 
     override def fetchNotificationIds(clientId: String, conversationId: UUID, notificationStatus: NotificationStatus.Value): Future[List[NotificationWithIdOnly]] = {
