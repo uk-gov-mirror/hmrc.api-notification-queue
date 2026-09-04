@@ -3,3 +3,4 @@ repoVisibility: public_0C3F0CE3E6E6448FAD341E7BFA50FCD333E06A20CFF05FCACE61154DD
 description: The API Notification Queue service provides a means of persisting and actively retrieving notifications, as this is where all the pull notifications are processed and saved. The api-notification-pull service acts as the upstream client, facilitating the retrieval of these notifications.
 test-repositories:
   - customs-automation-test
+serviceNowMapping: SNSVC0019200
